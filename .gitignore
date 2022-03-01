@@ -19,11 +19,18 @@ a.out
 !CMakeLists.txt
 *.odt
 *.rtf
+*.log
+**build**
 
-CMakeFiles/**
+#====================================================
+#     CMake FILES
+#====================================================
+**/CMakeFiles/**
 
 Makefile
 cmake_install.cmake
 *.so
 *.dylib
 osmanip_test_suite
+
+src/main.cpp

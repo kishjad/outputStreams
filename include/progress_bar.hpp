@@ -43,7 +43,7 @@ namespace osm
         void setBrackets( const std::string & brackets_open, const std::string & brackets_close );
         void setBegin();
         void setEnd();
-        void setColor( const std::string & color );
+        void setColor( const t_ops & color );
         void setRemainingTimeFlag( const std::string & time_flag );
 
         //====================================================

@@ -2,7 +2,7 @@
 #define PLOT2DCANVAS
 
 // My headers
-#include "../graphics/canvas.hpp"
+#include "canvas.hpp"
 
 // STD headers
 #include <functional>

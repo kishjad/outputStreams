@@ -1,7 +1,7 @@
 // My headers
-#include "../include/utils/helper_tools.hpp"
-#include "../include/manipulators/csmanip.hpp"
-#include "../include/progressbar/progress_bar.hpp"
+#include "helper_tools.hpp"
+#include "csmanip.hpp"
+#include "progress_bar.hpp"
 
 // STD headers
 #include <iostream>
@@ -29,7 +29,7 @@ namespace osm
      brackets_open_( "" ),
      brackets_close_( "" ),
      begin_timer( steady_clock::now() ),
-     color_( reset( "color" ) ),
+     color_( feat( t_ops::rst_color ) ),
      ticks_occurred( 0 ),
      time_flag_( "off" )
     {
@@ -155,9 +155,9 @@ namespace osm
     }
 
     template <typename bar_type>
-    void ProgressBar<bar_type>::setColor( const std::string & color )
+    void ProgressBar<bar_type>::setColor( const t_ops& color )
     {
-        color_ = feat( col, color );
+        color_ = feat( color );
     }
 
     template <typename bar_type>
@@ -182,7 +182,7 @@ namespace osm
         begin_timer = steady_clock::now(),
         brackets_open_ = "",
         brackets_close_ = "",
-        color_ = reset( "color" );
+        color_ = feat( t_ops::rst_color );
         time_flag_ = "off";
     }
 
@@ -234,7 +234,7 @@ namespace osm
     template <typename bar_type>
     void ProgressBar<bar_type>::resetColor()
     {
-        color_ = reset( "color" );
+        color_ = feat( t_ops::rst_color );
     }
 
     //====================================================
@@ -360,11 +360,11 @@ namespace osm
         seconds_left = std::chrono::duration_cast<std::chrono::seconds>( time_left - minutes_left );
 
         std::cout << "["
-                  << feat( sty, "italics" ) + "Estimated time left: " + reset( "italics" )
-                  << feat( col, "green" ) << minutes_left.count() << reset( "color" ) << "m "
-                  << feat( col, "green" ) << seconds_left.count() << reset( "color" ) << "s"
+                  << feat( t_ops::italics ) + "Estimated time left: " + feat( t_ops::rst_italics )
+                  << feat( t_ops::green ) << minutes_left.count() << feat( t_ops::rst_color ) << "m "
+                  << feat( t_ops::green ) << seconds_left.count() << feat( t_ops::rst_color ) << "s"
                   << "]"
-                  << feat( tcsc, "cln", 0 );
+                  << feat( t_ops::clear_line );
     }
 
     //====================================================
@@ -380,7 +380,7 @@ namespace osm
                         { return ( message_ != null_str ); },
                         empty_space + message_ + empty_space,
                         empty_space )
-                  << reset( "color" );
+                  << feat( t_ops::rst_color );
 
         if( time_flag_ == "on" )
         {
@@ -411,10 +411,10 @@ namespace osm
         // Update of the progress indicator only:
         if( styles_map_.at( "indicator" ).find( style_ ) != styles_map_.at( "indicator" ).end() )
         {
-            output_ = feat( crs, "left", 100 ) +
+            output_ = feat( t_ops::cursor_backward, 100 ) +
                getColor() +
                std::to_string( static_cast<int>( round( iterating_var_++ ) ) ) +
-               reset( "color" ) +
+               feat( t_ops::rst_color ) +
                getStyle();
 
             update_output( output_ );
@@ -423,7 +423,7 @@ namespace osm
         // Update of the loader indicator only:
         else if( styles_map_.at( "loader" ).find( style_ ) != styles_map_.at( "loader" ).end() )
         {
-            output_ = feat( crs, "left", 100 ) +
+            output_ = feat( t_ops::cursor_backward, 100 ) +
                getBrackets_open() +
                getColor() +
                getStyle() * width_ +
@@ -431,7 +431,7 @@ namespace osm
                                                 { return isFloatingPoint( iterating_var ); },
                                                 26, 25 ) -
                                width_ ) +
-               reset( "color" ) +
+               feat( t_ops::rst_color ) +
                getBrackets_close();
 
             update_output( output_ );
@@ -440,7 +440,7 @@ namespace osm
         // Update of the whole progress bar:
         else if( style_.find( style_p_ ) != std::string::npos && style_.find( style_l_ ) != std::string::npos && type_ == "complete" )
         {
-            output_ = feat( crs, "left", 100 ) +
+            output_ = feat( t_ops::cursor_backward, 100 ) +
                getBrackets_open() +
                getColor() +
                style_l_ * width_ +
@@ -448,12 +448,12 @@ namespace osm
                                                 { return isFloatingPoint( iterating_var ); },
                                                 26, 25 ) -
                                width_ ) +
-               reset( "color" ) +
+               feat( t_ops::rst_color ) +
                getBrackets_close() +
                getColor() +
                empty_space +
                std::to_string( static_cast<int>( round( iterating_var_++ ) ) ) +
-               reset( "color" ) +
+               feat( t_ops::rst_color ) +
                style_p_;
 
             update_output( output_ );
@@ -462,16 +462,16 @@ namespace osm
         // Update of the progress spinner:
         else if( styles_map_.at( "spinner" ).find( style_ ) != styles_map_.at( "spinner" ).end() )
         {
-            output_ = feat( crs, "left", 100 ) +
+            output_ = feat( t_ops::cursor_backward, 100 ) +
                getColor() +
                getStyle()[ static_cast<unsigned long>( iterating_var_spin_ ) & 3 ] +
-               feat( col, "green" ) +
+               feat( t_ops::green ) +
                check_condition(
                          [ = ]
                          { return roundoff( iterating_var, 1 ) == roundoff( max_, 1 ) - one( iterating_var ); },
-                         static_cast<std::string>( feat( crs, "left", 100 ) + "0" ),
+                         static_cast<std::string>( feat( t_ops::cursor_backward, 100 ) + "0" ),
                          static_cast<std::string>( "" ) ) +
-               reset( "color" );
+               feat( t_ops::rst_color );
 
             update_output( output_ );
         }

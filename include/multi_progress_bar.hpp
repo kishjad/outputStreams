@@ -2,7 +2,7 @@
 #define MULTIPROGRESSBAR_HPP
 
 // My headers
-#include "../manipulators/csmanip.hpp"
+#include "csmanip.hpp"
 
 // STD headers
 #include <iostream>
@@ -72,20 +72,20 @@ namespace osm
         {
             std::lock_guard<std::mutex> lock { mutex_ };
             int idx_delta = idx - last_updated_index;
-            std::string direction;
+            auto direction = t_ops::none;
 
             if( idx_delta < 0 )
             {
-                direction = "up";
+                direction = t_ops::cursor_up;
                 idx_delta = -idx_delta;
             }
             else
             {
-                direction = "down";
+                direction = t_ops::cursor_down;
             }
             for( int i = 0; i < idx_delta; i++ )
             {
-                std::cout << feat( crs, direction, 1 );
+                std::cout << feat( direction, 1 );
             }
             last_updated_index = idx;
             []( ... ) {}

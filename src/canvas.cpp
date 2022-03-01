@@ -1,6 +1,6 @@
 // My headers
-#include "../include/graphics/canvas.hpp"
-#include "../include/manipulators/csmanip.hpp"
+#include "canvas.hpp"
+#include "csmanip.hpp"
 
 // STD headers
 #include <sstream>
@@ -127,7 +127,7 @@ namespace osm
         {
             for( unsigned int i = 0; i < height_; i++ )
             {
-                std::cout << feat( crs, "up", 1 );
+                std::cout << feat( t_ops::cursor_up, 1 );
             }
         }
 
@@ -136,7 +136,7 @@ namespace osm
 
         const auto & frame = [ & ]( unsigned int fi ) -> std::string
         {
-            return frame_feat_ + frames[ frame_style_ ][ fi ] + feat( rst, "all" );
+            return frame_feat_ + frames[ frame_style_ ][ fi ] + feat( t_ops::rst_all );
         };
 
         std::stringstream ss;
@@ -187,7 +187,7 @@ namespace osm
 
                 ss << feat_buffer_[ p ]
                    << char_buffer_[ p ]
-                   << feat( rst, "all" );
+                   << feat( t_ops::rst_all );
             }
             ss << std::endl;
         }

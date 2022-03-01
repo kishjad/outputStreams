@@ -1,9 +1,10 @@
 // My headers
-#include "../include/manipulators/csmanip.hpp"
-#include "../include/progressbar/progress_bar.hpp"
-#include "../include/progressbar/multi_progress_bar.hpp"
-#include "../include/graphics/canvas.hpp"
-#include "../include/graphics/plot_2D.hpp"
+#include "csmanip.hpp"
+#include "progress_bar.hpp"
+#include "multi_progress_bar.hpp"
+#include "canvas.hpp"
+#include "plot_2D.hpp"
+
 
 // STD headers
 #include <iostream>
@@ -27,22 +28,22 @@ void col_sty()
          << "     COLORS                                           " << endl
          << "======================================================" << endl
 
-         << feat( col, "black" ) << "This is a black string." << reset( "color" ) << endl
-         << feat( col, "red" ) << "This is a red string." << reset( "color" ) << endl
-         << feat( col, "green" ) << "This is a green string." << reset( "color" ) << endl
-         << feat( col, "orange" ) << "This is an orange string." << reset( "color" ) << endl
-         << feat( col, "blue" ) << "This is a blue string." << reset( "color" ) << endl
-         << feat( col, "purple" ) << "This is a purple string." << reset( "color" ) << endl
-         << feat( col, "cyan" ) << "This is a cyan string." << reset( "color" ) << endl
-         << feat( col, "gray" ) << "This is a gray string." << reset( "color" ) << endl
-         << feat( col, "dk gray" ) << "This is a dark gray string." << reset( "color" ) << endl
-         << feat( col, "lt red" ) << "This is a light red string." << reset( "color" ) << endl
-         << feat( col, "lt green" ) << "This is a light green string." << reset( "color" ) << endl
-         << feat( col, "yellow" ) << "This is a yellow string." << reset( "color" ) << endl
-         << feat( col, "lt blue" ) << "This is a light blue string." << reset( "color" ) << endl
-         << feat( col, "lt purple" ) << "This is a light purple string." << reset( "color" ) << endl
-         << feat( col, "lt cyan" ) << "This is a light cyan string." << reset( "color" ) << endl
-         << feat( col, "white" ) << "This is a white string." << reset( "color" ) << endl;
+         << feat( {t_ops::black} ) << "This is a black string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::red} ) << "This is a red string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::green} ) << "This is a green string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::orange} ) << "This is an orange string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::blue} ) << "This is a blue string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::purple} ) << "This is a purple string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::cyan} ) << "This is a cyan string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::gray} ) << "This is a gray string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::dk_gray} ) << "This is a dark gray string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::lt_red} ) << "This is a light red string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::lt_green} ) << "This is a light green string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::yellow} ) << "This is a yellow string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::lt_blue} ) << "This is a light blue string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::lt_purple} ) << "This is a light purple string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::lt_cyan} ) << "This is a light cyan string." << feat(t_ops::rst_color) << endl
+         << feat( {t_ops::white} ) << "This is a white string." << feat(t_ops::rst_color) << endl;
 
     sleep_for( seconds( 2 ) );
 
@@ -52,14 +53,14 @@ void col_sty()
          << "======================================================" << endl
          << endl
 
-         << feat( col, "bd black" ) << "This is a bold black string." << reset( "bd color" ) << endl
-         << feat( col, "bd red" ) << "This is a bold red string." << reset( "bd color" ) << endl
-         << feat( col, "bd green" ) << "This is a bold green string." << reset( "bd color" ) << endl
-         << feat( col, "bd orange" ) << "This is a bold orange string." << reset( "bd color" ) << endl
-         << feat( col, "bd blue" ) << "This is a bold blue string." << reset( "bd color" ) << endl
-         << feat( col, "bd purple" ) << "This is a bold purple string." << reset( "bd color" ) << endl
-         << feat( col, "bd cyan" ) << "This is a bold cyan string." << reset( "bd color" ) << endl
-         << feat( col, "bd gray" ) << "This is a bold gray string." << reset( "bd color" ) << endl;
+         << feat( t_ops::bd_black ) << "This is a bold black string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_red ) << "This is a bold red string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_green ) << "This is a bold green string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_orange ) << "This is a bold orange string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_blue ) << "This is a bold blue string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_purple ) << "This is a bold purple string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_cyan ) << "This is a bold cyan string." << feat(t_ops::rst_bd_color) << endl
+         << feat( t_ops::bd_gray ) << "This is a bold gray string." << feat(t_ops::rst_bd_color) << endl;
 
     sleep_for( seconds( 2 ) );
 
@@ -69,40 +70,40 @@ void col_sty()
          << "======================================================" << endl
          << endl
 
-         << feat( col, "bg black" ) << "This is a background black string." << reset( "bg color" ) << endl
-         << feat( col, "bg red" ) << "This is a background red string." << reset( "bg color" ) << endl
-         << feat( col, "bg green" ) << "This is a background green string." << reset( "bg color" ) << endl
-         << feat( col, "bg orange" ) << "This is a background orange string." << reset( "bg color" ) << endl
-         << feat( col, "bg blue" ) << "This is a background blue string." << reset( "bg color" ) << endl
-         << feat( col, "bg purple" ) << "This is a background purple string." << reset( "bg color" ) << endl
-         << feat( col, "bg cyan" ) << "This is a background cyan string." << reset( "bg color" ) << endl
-         << feat( col, "bg gray" ) << "This is a background gray string." << reset( "bg color" ) << endl
-         << feat( col, "bg dk gray" ) << "This is a background dark gray string." << reset( "bg color" ) << endl
-         << feat( col, "bg lt red" ) << "This is a background light red string." << reset( "bg color" ) << endl
-         << feat( col, "bg lt green" ) << "This is a background light green string." << reset( "bg color" ) << endl
-         << feat( col, "bg yellow" ) << "This is a background yellow string." << reset( "bg color" ) << endl
-         << feat( col, "bg lt blue" ) << "This is a background light blue string." << reset( "bg color" ) << endl
-         << feat( col, "bg lt purple" ) << "This is a background light purple string." << reset( "bg color" ) << endl
-         << feat( col, "bg lt cyan" ) << "This is a background light cyan string." << reset( "bg color" ) << endl
-         << feat( col, "bg white" ) << "This is a background white string." << reset( "bg color" ) << " <-(white)" << endl;
+         << feat(t_ops::bg_black ) << "This is a background black string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_red ) << "This is a background red string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_green ) << "This is a background green string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_orange ) << "This is a background orange string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_blue ) << "This is a background blue string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_purple ) << "This is a background purple string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_cyan ) << "This is a background cyan string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_gray ) << "This is a background gray string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_dk_gray ) << "This is a background dark gray string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_lt_red ) << "This is a background light red string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_lt_green ) << "This is a background light green string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_yellow ) << "This is a background yellow string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_lt_blue ) << "This is a background light blue string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_lt_purple ) << "This is a background light purple string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_lt_cyan ) << "This is a background light cyan string." << feat(t_ops::rst_bg_color) << endl
+         << feat(t_ops::bg_white ) << "This is a background white string." << feat(t_ops::rst_bg_color) << " <-(white)" << endl;
 
     sleep_for( seconds( 2 ) );
 
-    cout << endl
-         << "======================================================" << endl
-         << "     STYLES                                           " << endl
-         << "======================================================" << endl
-         << endl
+    // cout << endl
+    //      << "======================================================" << endl
+    //      << "     STYLES                                           " << endl
+    //      << "======================================================" << endl
+    //      << endl
 
-         << feat( sty, "bold" ) << "This is a bold string." << reset( "bd/ft" ) << endl
-         << feat( sty, "faint" ) << "This is a faint string." << reset( "bd/ft" ) << endl
-         << feat( sty, "italics" ) << "This is an italics string." << reset( "italics" ) << endl
-         << feat( sty, "underlined" ) << "This is an underlined string." << reset( "underlined" ) << endl
-         << feat( sty, "d-underlined" ) << "This is a doubly underlined string." << reset( "underlined" ) << endl
-         << feat( sty, "inverse" ) << "This is an inverse string." << reset( "inverse" ) << endl
-         << feat( sty, "invisible" ) << "This is an invisible string." << reset( "invisible" ) << "It was an invisible string." << endl
-         << feat( sty, "crossed" ) << "This is a crossed-out string." << reset( "crossed" ) << endl
-         << feat( sty, "blink" ) << "This is a blink string." << reset( "blink" ) << endl;
+    //      << feat( t_ops::bold ) << "This is a bold string." << reset( "bd/ft" ) << endl
+    //      << feat( t_ops::faint ) << "This is a faint string." << reset( "bd/ft" ) << endl
+    //      << feat( t_ops::italics ) << "This is an italics string." << reset( "italics" ) << endl
+    //      << feat( t_ops::underlined ) << "This is an underlined string." << reset( "underlined" ) << endl
+    //      << feat( t_ops::d_underlined ) << "This is a doubly underlined string." << reset( "underlined" ) << endl
+    //      << feat( t_ops::inverse ) << "This is an inverse string." << reset( "inverse" ) << endl
+    //      << feat( t_ops::invisible ) << "This is an invisible string." << reset( "invisible" ) << "It was an invisible string." << endl
+    //      << feat( t_ops::crossed ) << "This is a crossed-out string." << reset( "crossed" ) << endl
+    //      << feat( t_ops::blink ) << "This is a blink string." << reset( "blink" ) << endl;
 
     cout << endl
          << "======================================================" << endl
@@ -110,9 +111,9 @@ void col_sty()
          << "======================================================" << endl
          << endl
 
-         << feat( sty, "underlined" ) << feat( col, "red" ) << "This is an underlined red string." << reset( "all" ) << endl
-         << feat( sty, "italics" ) << feat( col, "blue" ) << "This is an italics blue string." << reset( "all" ) << endl
-         << feat( sty, "faint" ) << feat( col, "orange" ) << "This is a faint orange string." << reset( "all" ) << endl;
+         << feat( {t_ops::underlined, t_ops::red} ) << "This is an underlined red string." << feat( t_ops::rst_all ) << endl
+         << feat( {t_ops::italics, t_ops::blue} ) << "This is an italics blue string." << feat( t_ops::rst_all ) << endl
+         << feat( {t_ops::faint, t_ops::orange} ) << "This is a faint orange string." << feat( t_ops::rst_all ) << endl;
     sleep_for( seconds( 2 ) );
 }
 
@@ -129,8 +130,8 @@ void printer()
     // Normal examples:
     print( cout, "This is the ", "\"printf\" ", "function for the normal output stream! ", 100, "% working!" );
     print( cerr, "This is the printf function for the stderr stream! ", "Managing errors is always important!" );
-    print( clog, "Also writing in stdlog is important! ", feat( sty, "underlined" ), "Very important", reset( "underlined" ), "!" );
-    //   print();
+    print( clog, "Also writing in stdlog is important! ", feat(t_ops::underlined), "Very important", feat(t_ops::rst_underlined), "!" );
+    print();
 
     // Writing on a file:
     ofstream file_stream;
@@ -305,7 +306,7 @@ void mixed_bars()
     cout << endl
          << endl;
 
-    mixed_bar.setColor( "red" );
+    mixed_bar.setColor( t_ops::red );
     mixed_bar.setRemainingTimeFlag( "on" );
     mixed_bar.resetRemainingTime();
 
@@ -357,7 +358,7 @@ void multi_bars()
     prog_int.setStyle( "complete", "%", "#" );
     prog_int.setBrackets( "[", "]" );
     prog_int.setMessage( "Installing..." );
-    prog_int.setColor( "red" );
+    prog_int.setColor( t_ops::red  );
 
     ProgressBar<int> prog_int_2;
     prog_int_2.setMin( 5 );
@@ -365,7 +366,7 @@ void multi_bars()
     prog_int_2.setStyle( "complete", "%", "■" );
     prog_int_2.setBrackets( "{", "}" );
     prog_int_2.setMessage( "Processing..." );
-    prog_int_2.setColor( "purple" );
+    prog_int_2.setColor( t_ops::purple  );
 
     ProgressBar<float> prog_float;
     prog_float.setMin( 0.1f );
@@ -373,7 +374,7 @@ void multi_bars()
     prog_float.setStyle( "complete", "%", "#" );
     prog_float.setBrackets( "[", "]" );
     prog_float.setMessage( "Downloading..." );
-    prog_float.setColor( "yellow" );
+    prog_float.setColor( t_ops::yellow );
 
     auto bars = MultiProgressBar( prog_int, prog_int_2, prog_float );
 
@@ -448,7 +449,7 @@ void progress_spinner()
     ProgressBar<float> spinner_float;
     spinner_float.setMin( 2.3f );
     spinner_float.setMax( 6.7f );
-    spinner_float.setColor( "lt blue" );
+    spinner_float.setColor( t_ops::lt_blue );
     spinner_float.addStyle( "spinner", "|/_\\" );
     spinner_float.setStyle( "spinner", "|/_\\" );
     spinner_float.setMessage( "elaborating data..." );
@@ -467,109 +468,109 @@ void progress_spinner()
 //====================================================
 //     2D TERMINAL GRAPHICS
 //====================================================
-void canvas_2d()
-{
-    cout << endl
-         << "======================================================" << endl
-         << "     CANVAS                                    " << endl
-         << "======================================================" << endl
-         << endl;
+// void canvas_2d()
+// {
+//     cout << endl
+//          << "======================================================" << endl
+//          << "     CANVAS                                    " << endl
+//          << "======================================================" << endl
+//          << endl;
 
-    cout << "Display an animation in a canvas" << endl;
-    Canvas canvas( 10, 10 );
-    canvas.setBackground( '.', feat( col, "bg white" ) + feat( col, "black" ) );
-    for( unsigned int i = 0; i < 10; i++ )
-    {
-        canvas.clear();
-        canvas.put( 0, 2, 'x' );
-        canvas.put( i, 3, 'A', feat( col, "red" ) );
-        canvas.put( 5, 0, 'B', feat( col, "blue" ) );
-        canvas.put( 7, 8, 'Z', feat( col, "bg cyan" ) + feat( col, "black" ) + feat( sty, "bold" ) );
-        canvas.refresh();
-        this_thread::sleep_for( chrono::milliseconds( 100 ) );
-    }
+//     cout << "Display an animation in a canvas" << endl;
+//     Canvas canvas( 10, 10 );
+//     canvas.setBackground( '.', feat( col, "bg white" ) + feat( col, "black" ) );
+//     for( unsigned int i = 0; i < 10; i++ )
+//     {
+//         canvas.clear();
+//         canvas.put( 0, 2, 'x' );
+//         canvas.put( i, 3, 'A', feat( col, "red" ) );
+//         canvas.put( 5, 0, 'B', feat( col, "blue" ) );
+//         canvas.put( 7, 8, 'Z', feat( col, "bg cyan" ) + feat( col, "black" ) + feat( sty, "bold" ) );
+//         canvas.refresh();
+//         this_thread::sleep_for( chrono::milliseconds( 100 ) );
+//     }
 
-    cout << endl
-         << "Canvas with an ASCII frame" << endl;
+//     cout << endl
+//          << "Canvas with an ASCII frame" << endl;
 
-    Canvas ascii_framed_canvas( 15, 10 );
-    ascii_framed_canvas.enableFrame( true );
-    ascii_framed_canvas.setFrame( FrameStyle::ASCII, feat( col, "bg white" ) + feat( col, "black" ) );
-    ascii_framed_canvas.clear();
-    ascii_framed_canvas.put( 3, 4, 'H' );
-    ascii_framed_canvas.put( 4, 4, 'e' );
-    ascii_framed_canvas.put( 5, 4, 'l' );
-    ascii_framed_canvas.put( 6, 4, 'l' );
-    ascii_framed_canvas.put( 7, 4, 'o' );
-    ascii_framed_canvas.refresh();
+//     Canvas ascii_framed_canvas( 15, 10 );
+//     ascii_framed_canvas.enableFrame( true );
+//     ascii_framed_canvas.setFrame( FrameStyle::ASCII, feat( col, "bg white" ) + feat( col, "black" ) );
+//     ascii_framed_canvas.clear();
+//     ascii_framed_canvas.put( 3, 4, 'H' );
+//     ascii_framed_canvas.put( 4, 4, 'e' );
+//     ascii_framed_canvas.put( 5, 4, 'l' );
+//     ascii_framed_canvas.put( 6, 4, 'l' );
+//     ascii_framed_canvas.put( 7, 4, 'o' );
+//     ascii_framed_canvas.refresh();
 
-    sleep_for( seconds( 2 ) );
+//     sleep_for( seconds( 2 ) );
 
-    cout << endl
-         << "Canvas with a BOX frame" << endl;
+//     cout << endl
+//          << "Canvas with a BOX frame" << endl;
 
-    Canvas box_framed_canvas( 20, 8 );
-    box_framed_canvas.enableFrame( true );
-    box_framed_canvas.setFrame( FrameStyle::BOX );
-    box_framed_canvas.clear();
-    box_framed_canvas.put( 3, 4, 'H' );
-    box_framed_canvas.put( 4, 4, 'e' );
-    box_framed_canvas.put( 5, 4, 'l' );
-    box_framed_canvas.put( 6, 4, 'l' );
-    box_framed_canvas.put( 7, 4, 'o' );
-    box_framed_canvas.refresh();
+//     Canvas box_framed_canvas( 20, 8 );
+//     box_framed_canvas.enableFrame( true );
+//     box_framed_canvas.setFrame( FrameStyle::BOX );
+//     box_framed_canvas.clear();
+//     box_framed_canvas.put( 3, 4, 'H' );
+//     box_framed_canvas.put( 4, 4, 'e' );
+//     box_framed_canvas.put( 5, 4, 'l' );
+//     box_framed_canvas.put( 6, 4, 'l' );
+//     box_framed_canvas.put( 7, 4, 'o' );
+//     box_framed_canvas.refresh();
 
-    sleep_for( seconds( 2 ) );
+//     sleep_for( seconds( 2 ) );
 
-    cout << endl
-         << "Plot2DCanvas with sin and cos" << endl;
-    Plot2DCanvas plot_2d_canvas( 50, 20 );
-    plot_2d_canvas.setBackground( ' ', feat( col, "bg white" ) );
-    plot_2d_canvas.enableFrame( true );
-    plot_2d_canvas.setFrame( FrameStyle::BOX, feat( col, "bg white" ) + feat( col, "black" ) );
-    plot_2d_canvas.enableFrame( true );
-    plot_2d_canvas.setFrame( FrameStyle::BOX, feat( col, "bg white" ) + feat( col, "black" ) );
-    plot_2d_canvas.setScale( 1 / 3.14, 0.2 );
-    for( float i = 0; i < 40; i++ )
-    {
-        plot_2d_canvas.setOffset( i / 3.14, -2 );
-        plot_2d_canvas.clear();
-        plot_2d_canvas.draw( std::function<float( float )>( []( float x ) -> float
-                                                            { return std::cos( x ); } ),
-                             'X',
-                             feat( col, "bg white" ) + feat( col, "bd red" ) );
-        plot_2d_canvas.draw( std::function<float( float )>( []( float x ) -> float
-                                                            { return std::sin( x ); } ),
-                             'X',
-                             feat( col, "bg white" ) + feat( col, "bd blue" ) );
-        plot_2d_canvas.refresh();
-        sleep_for( milliseconds( 100 ) );
-    }
+//     cout << endl
+//          << "Plot2DCanvas with sin and cos" << endl;
+//     Plot2DCanvas plot_2d_canvas( 50, 20 );
+//     plot_2d_canvas.setBackground( ' ', feat( col, "bg white" ) );
+//     plot_2d_canvas.enableFrame( true );
+//     plot_2d_canvas.setFrame( FrameStyle::BOX, feat( col, "bg white" ) + feat( col, "black" ) );
+//     plot_2d_canvas.enableFrame( true );
+//     plot_2d_canvas.setFrame( FrameStyle::BOX, feat( col, "bg white" ) + feat( col, "black" ) );
+//     plot_2d_canvas.setScale( 1 / 3.14, 0.2 );
+//     for( float i = 0; i < 40; i++ )
+//     {
+//         plot_2d_canvas.setOffset( i / 3.14, -2 );
+//         plot_2d_canvas.clear();
+//         plot_2d_canvas.draw( std::function<float( float )>( []( float x ) -> float
+//                                                             { return std::cos( x ); } ),
+//                              'X',
+//                              feat( col, "bg white" ) + feat( col, "bd red" ) );
+//         plot_2d_canvas.draw( std::function<float( float )>( []( float x ) -> float
+//                                                             { return std::sin( x ); } ),
+//                              'X',
+//                              feat( col, "bg white" ) + feat( col, "bd blue" ) );
+//         plot_2d_canvas.refresh();
+//         sleep_for( milliseconds( 100 ) );
+//     }
 
-    cout << endl
-         << endl;
-}
+//     cout << endl
+//          << endl;
+// }
 
 //====================================================
 //     MAIN
 //====================================================
 int main()
 {
-    OPTION( CURSOR::OFF );
+    CursorOpt( CURSOR::OFF );
 
     // Manipulators:
     col_sty();      // Color/style.
     printer();      // For printing functions.
 
-    // Progress bars:
-    perc_bars();             // Percentage bar.
-    load_bars();             // Loading bar.
-    mixed_bars();            // Mixed bar.
-    multi_bars();            // Multi progress bars
-    progress_spinner();      // Progress spinner.
+    // // Progress bars:
+    // perc_bars();             // Percentage bar.
+    // load_bars();             // Loading bar.
+    // mixed_bars();            // Mixed bar.
+    // multi_bars();            // Multi progress bars
+    // progress_spinner();      // Progress spinner.
 
     // Terminal graphics visualization:
-    canvas_2d();
+    // canvas_2d();
 
-    OPTION( CURSOR::ON );
+    CursorOpt( CURSOR::ON );
 }

@@ -1,5 +1,5 @@
 // My headers
-#include "../include/utils/helper_tools.hpp"
+#include "helper_tools.hpp"
 
 // STD headers
 #include <iostream>
