@@ -27,7 +27,9 @@ namespace osm
     //====================================================
     //     VARIABLES DECLARATION
     //====================================================
-    extern const std::map<std::string, std::string> col, sty, rst, tcs;
+    extern struct color_pair;
+    extern color_pair col[];
+    extern const std::map<std::string, std::string> sty, rst, tcs;
     extern const string_pair_map crs, tcsc;
 
     //====================================================

@@ -9,14 +9,20 @@
 
 namespace osm
 {
+    typedef struct color_pair
+    {
+        const char * name;
+        const char * value;
+    } ;
+
+    constexpr const char* default_color = "\033[96m";
+    constexpr const char* default_bg_color = "\033[40m";
+    constexpr const char* default_style = "\033[0m";
     //====================================================
     //     DEFINITION OF THE "color" MAP
     //====================================================
-    const std::map<std::string, std::string> col {
-        // Error variables:
-        { "error", "Inserted color" },
 
-        // Color variables:
+    constexpr color_pair col[]= {
         { "black", "\033[30m" },
         { "red", "\033[31m" },
         { "green", "\033[32m" },
@@ -33,8 +39,6 @@ namespace osm
         { "lt purple", "\033[95m" },
         { "lt cyan", "\033[96m" },
         { "white", "\033[97m" },
-
-        // Background color variables:
         { "bg black", "\033[40m" },
         { "bg red", "\033[41m" },
         { "bg green", "\033[42m" },
@@ -51,8 +55,6 @@ namespace osm
         { "bg lt purple", "\033[105m" },
         { "bg lt cyan", "\033[106m" },
         { "bg white", "\033[107m" },
-
-        // Bold color variables:
         { "bd black", "\033[1;30m" },
         { "bd red", "\033[1;31m" },
         { "bd green", "\033[1;32m" },
@@ -67,7 +69,7 @@ namespace osm
     //     DEFINITION OF THE "style" MAP
     //====================================================
     // Definition of the "style" map:
-    const std::map<std::string, std::string> sty {
+    constexpr color_pair sty[] = {
         // Error variables:
         { "error", "Inserted style" },
 
@@ -158,13 +160,58 @@ namespace osm
     //====================================================
     //     DEFINITION OF THE "feat" FUNCTION
     //====================================================
-    std::string feat( const std::map<std::string, std::string> & generic_map, const std::string & feat_string )
+    std::string feat( const color_pair & generic_map, const std::string & feat_string )
     {
         if( generic_map.find( feat_string ) == generic_map.end() )
         {
             throw runtime_error_func( generic_map.at( "error" ), feat_string, "is not supported!" );
         }
         return generic_map.at( feat_string );
+    }
+    
+
+    std::string txtCol( const std::string & color )
+    {
+        for( const auto & color_pair : col )
+        {
+            if( color_pair.name == color )
+            {
+                return color_pair.value;
+            }
+        }
+        return default_color;
+    }
+
+    std::string bgCol( const std::string & color )
+    {
+        for( const auto & color_pair : col )
+        {
+            if( color_pair.name == color )
+            {
+                return color_pair.value;
+            }
+        }
+        return default_color;
+    }
+
+    std::string styCol( const std::string & color )
+    {
+        for( const auto & color_pair : sty )
+        {
+            if( color_pair.name == color )
+            {
+                return color_pair.value;
+            }
+        }
+        return default_style;
+    }
+    
+    template<typename color=std::string, typename bg=std::string, typename style=std::string>
+    std::string feat(color color_string = "", bg bg_string = "", style style_string="")
+    {
+        if(!color_string.empty()){
+            
+        }
     }
 
     //====================================================
