@@ -1,0 +1,4 @@
+include_directories(graphics)
+include_directories(manipulators)
+include_directories(progressbar)
+include_directories(utils)
