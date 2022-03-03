@@ -1,0 +1,1 @@
+![alt text](https://github.com/kshitej/outputStream/blob/main/manip.png?raw=true)
