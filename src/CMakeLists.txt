@@ -4,11 +4,11 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
     
 add_definitions(-std=c++17)
 add_library(osmanip SHARED
-canvas.cpp
-plot_2D.cpp
-csmanip.cpp
-progress_bar.cpp
-helper_tools.cpp
+    canvas.cpp
+    plot_2D.cpp
+    csmanip.cpp
+    progress_bar.cpp
+    helper_tools.cpp
 )
 
 
