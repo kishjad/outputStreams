@@ -1,1 +1,1 @@
-![alt text](https://github.com/kshitej/outputStream/blob/main/manip.png?raw=true)
+![alt text](https://media.githubusercontent.com/media/kshitej/outputStreams/main/doc/manip.png)
