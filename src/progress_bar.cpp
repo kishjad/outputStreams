@@ -13,7 +13,7 @@
 #include <mutex>
 #include <stdexcept>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     DEFINITION OF THE CONSTRUCTORS AND DESTRUCTOR
@@ -528,4 +528,4 @@ namespace osm
     template class ProgressBar<double>;
     template class ProgressBar<long double>;
     template class ProgressBar<float>;
-}      // namespace osm
+}      // namespace outStream

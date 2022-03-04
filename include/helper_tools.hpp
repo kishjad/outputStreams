@@ -8,7 +8,7 @@
 #include <type_traits>
 #include <stdexcept>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     GLOBAL HELPER VARIABLES
@@ -38,5 +38,5 @@ namespace osm
 
     template <typename T>
     extern bool IsInBounds( const T & value, const T & low, const T & high );
-}      // namespace osm
+}      // namespace outStream
 #endif

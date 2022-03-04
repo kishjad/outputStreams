@@ -1,7 +1,7 @@
 // My headers
 #include "plot_2D.hpp"
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     CONSTRUCTORS AND DESTRUCTORS DEFINITION
@@ -52,4 +52,4 @@ namespace osm
     {
         return scale_y_;
     }
-}      // namespace osm
+}      // namespace outStream

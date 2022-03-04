@@ -9,7 +9,7 @@
 #include <cmath>
 #include <string>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     PLOT2DCANVAS CLASS
@@ -57,6 +57,6 @@ namespace osm
         //====================================================
         float offset_x_, offset_y_, scale_x_, scale_y_;
     };
-}      // namespace osm
+}      // namespace outStream
 
 #endif

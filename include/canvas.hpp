@@ -1,11 +1,11 @@
-#ifndef OSM_CANVAS_HPP
-#define OSM_CANVAS_HPP
+#ifndef OUTSTREAM_CANVAS_HPP
+#define OUTSTREAM_CANVAS_HPP
 
 // STD headers
 #include <vector>
 #include <string>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     FRAMESTYLE ENUM CLASS
@@ -79,6 +79,6 @@ namespace osm
         //====================================================
         unsigned int width_, height_;
     };
-}      // namespace osm
+}      // namespace outStream
 
 #endif

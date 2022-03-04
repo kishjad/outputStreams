@@ -9,7 +9,7 @@
 #include <fstream>
 
 // Using namespaces
-using namespace osm;
+using namespace outStream;
 using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;

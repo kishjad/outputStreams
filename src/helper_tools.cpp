@@ -11,7 +11,7 @@
 #include <stdexcept>
 #include <cmath>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     GLOBAL VARIABLES DECLARATION
@@ -131,4 +131,4 @@ namespace osm
     template bool IsInBounds<long>( const long & value, const long & low, const long & high );
     template bool IsInBounds<long long>( const long long & value, const long long & low, const long long & high );
     template bool IsInBounds<float>( const float & value, const float & low, const float & high );
-}      // namespace osm
+}      // namespace outStream

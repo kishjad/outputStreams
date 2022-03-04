@@ -12,7 +12,7 @@
 #include <mutex>
 #include <utility>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     TYPE TO GENERATE INDICES FOR PARAMETER PACKS
@@ -139,6 +139,6 @@ namespace osm
             return pb.update( v );
         }
     };
-}      // namespace osm
+}      // namespace outStream
 
 #endif

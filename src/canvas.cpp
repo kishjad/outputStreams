@@ -6,7 +6,7 @@
 #include <sstream>
 #include <iostream>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     CONSTRUCTORS AND DESTRUCTORS DEFINITION
@@ -203,4 +203,4 @@ namespace osm
         char_buffer_.resize( width_ * height_ );
         feat_buffer_.resize( width_ * height_ );
     }
-}      // namespace osm
+}      // namespace outStream

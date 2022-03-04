@@ -10,7 +10,7 @@
 #include <mutex>
 #include <cstdint>
 
-namespace osm
+namespace outStream
 {
     //====================================================
     //     PROGRESSBAR CLASS
@@ -108,6 +108,6 @@ namespace osm
         std::chrono::minutes minutes_left;
         std::chrono::seconds seconds_left;
     };
-}      // namespace osm
+}      // namespace outStream
 
 #endif
