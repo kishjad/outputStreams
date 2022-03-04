@@ -15,7 +15,7 @@ namespace outStream
     //     DEFINITION OF THE "feat" FUNCTION
     //====================================================
 
-    [[nodiscard]] std::string feat(std::initializer_list<t_ops> ops)
+    [[nodiscard]] std::string feat(const std::initializer_list<t_ops> ops)
     {
         std::string result = "";
         for(auto op : ops)
@@ -25,13 +25,13 @@ namespace outStream
         return result;
     }
 
-    [[nodiscard]] std::string feat(t_ops ops)
+    [[nodiscard]] std::string feat(const t_ops ops)
     {
         return ops_array[static_cast<unsigned long>(ops)];
     }
 
     template <typename T>
-    [[nodiscard]] std::string feat(t_ops ops,T num ){
+    [[nodiscard]] std::string feat(const t_ops ops,const T num ){
         if( (num < 0) || (std::string(ops_array[static_cast<unsigned long>(ops)]).find("%d") == std::string::npos) ){
             return "";
         }

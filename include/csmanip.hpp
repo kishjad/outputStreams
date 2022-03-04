@@ -28,11 +28,11 @@ namespace outStream
     //====================================================
     //     FUNCTIONS DECLARATION
     //====================================================
-    extern std::string feat(std::initializer_list<t_ops> ops);
-    extern std::string feat(t_ops ops);
+    extern std::string feat(const std::initializer_list<t_ops> ops);
+    extern std::string feat(const t_ops ops);
     
     template <typename T>
-    extern std::string feat(t_ops ops,T num );
+    extern std::string feat(const t_ops ops,const T num );
     
     extern std::string reset( const std::string & reset_string );
     
