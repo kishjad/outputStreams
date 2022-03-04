@@ -1,9 +1,5 @@
 // My headers
-#include "csmanip.hpp"
-#include "progress_bar.hpp"
-#include "multi_progress_bar.hpp"
-#include "canvas.hpp"
-#include "plot_2D.hpp"
+#include "outputStream.hpp"
 
 
 // STD headers
@@ -34,17 +30,7 @@ void col_sty()
          << feat( {t_ops::orange} ) << "This is an orange string." << feat(t_ops::rst_color) << endl
          << feat( {t_ops::blue} ) << "This is a blue string." << feat(t_ops::rst_color) << endl
          << feat( {t_ops::purple} ) << "This is a purple string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::cyan} ) << "This is a cyan string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::gray} ) << "This is a gray string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::dk_gray} ) << "This is a dark gray string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::lt_red} ) << "This is a light red string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::lt_green} ) << "This is a light green string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::yellow} ) << "This is a yellow string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::lt_blue} ) << "This is a light blue string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::lt_purple} ) << "This is a light purple string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::lt_cyan} ) << "This is a light cyan string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::white} ) << "This is a white string." << feat(t_ops::rst_color) << endl;
-
+         << feat( {t_ops::cyan} ) << "This is a cyan string." << feat(t_ops::rst_color) << endl;
     sleep_for( seconds( 2 ) );
 
     cout << endl
@@ -56,10 +42,6 @@ void col_sty()
          << feat( t_ops::bd_black ) << "This is a bold black string." << feat(t_ops::rst_bd_color) << endl
          << feat( t_ops::bd_red ) << "This is a bold red string." << feat(t_ops::rst_bd_color) << endl
          << feat( t_ops::bd_green ) << "This is a bold green string." << feat(t_ops::rst_bd_color) << endl
-         << feat( t_ops::bd_orange ) << "This is a bold orange string." << feat(t_ops::rst_bd_color) << endl
-         << feat( t_ops::bd_blue ) << "This is a bold blue string." << feat(t_ops::rst_bd_color) << endl
-         << feat( t_ops::bd_purple ) << "This is a bold purple string." << feat(t_ops::rst_bd_color) << endl
-         << feat( t_ops::bd_cyan ) << "This is a bold cyan string." << feat(t_ops::rst_bd_color) << endl
          << feat( t_ops::bd_gray ) << "This is a bold gray string." << feat(t_ops::rst_bd_color) << endl;
 
     sleep_for( seconds( 2 ) );
@@ -74,17 +56,6 @@ void col_sty()
          << feat(t_ops::bg_red ) << "This is a background red string." << feat(t_ops::rst_bg_color) << endl
          << feat(t_ops::bg_green ) << "This is a background green string." << feat(t_ops::rst_bg_color) << endl
          << feat(t_ops::bg_orange ) << "This is a background orange string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_blue ) << "This is a background blue string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_purple ) << "This is a background purple string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_cyan ) << "This is a background cyan string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_gray ) << "This is a background gray string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_dk_gray ) << "This is a background dark gray string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_lt_red ) << "This is a background light red string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_lt_green ) << "This is a background light green string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_yellow ) << "This is a background yellow string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_lt_blue ) << "This is a background light blue string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_lt_purple ) << "This is a background light purple string." << feat(t_ops::rst_bg_color) << endl
-         << feat(t_ops::bg_lt_cyan ) << "This is a background light cyan string." << feat(t_ops::rst_bg_color) << endl
          << feat(t_ops::bg_white ) << "This is a background white string." << feat(t_ops::rst_bg_color) << " <-(white)" << endl;
 
     sleep_for( seconds( 2 ) );
