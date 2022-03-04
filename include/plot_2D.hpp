@@ -40,7 +40,7 @@ namespace osm
         //     DRAW METHOD DEFINITION
         //====================================================
         template <typename Y, typename X>
-        inline void draw( std::function<Y( X )> function, char c, const std::string & feat = "" )
+        constexpr void draw( std::function<Y( X )> function, char c, const std::string & feat = "" )
         {
             for( int x = 0; x < width_; x++ )
             {

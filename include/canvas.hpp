@@ -22,7 +22,7 @@ namespace osm
     //====================================================
     class Canvas
     {
-   public:
+    public:
         //====================================================
         //     CONSTRUCTORS AND DESTRUCTORS DECLARATION
         //====================================================
@@ -55,7 +55,7 @@ namespace osm
         void put( unsigned int x, unsigned int y, char c, const std::string & feat = "" );
         void refresh();
 
-   private:
+    private:
         //====================================================
         //     PRIVATE ATTRIBUTES DECLARATION
         //====================================================

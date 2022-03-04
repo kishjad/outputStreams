@@ -38,7 +38,7 @@ namespace osm
     template <class... Indicators>
     class make_MultiProgressBar
     {
-   public:
+    public:
         //====================================================
         //     CONSTRUCTORS
         //====================================================
@@ -63,7 +63,7 @@ namespace osm
             call_all( gen_indices<sizeof...( Indicators )>(), std::forward<Func>( func ), std::forward<Args>( args )... );
         }
 
-   private:
+    private:
         //====================================================
         //     OTHER PRIVATE METHODS
         //====================================================
