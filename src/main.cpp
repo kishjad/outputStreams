@@ -30,7 +30,8 @@ void col_sty()
          << feat( {t_ops::orange} ) << "This is an orange string." << feat(t_ops::rst_color) << endl
          << feat( {t_ops::blue} ) << "This is a blue string." << feat(t_ops::rst_color) << endl
          << feat( {t_ops::purple} ) << "This is a purple string." << feat(t_ops::rst_color) << endl
-         << feat( {t_ops::cyan} ) << "This is a cyan string." << feat(t_ops::rst_color) << endl;
+         << feat( {t_ops::cyan} ) << "This is a cyan string." << feat(t_ops::rst_color) << endl
+         << traverse(1,3) << endl;
     sleep_for( seconds( 2 ) );
 
     cout << endl

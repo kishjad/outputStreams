@@ -48,9 +48,10 @@ namespace osm
     template std::string feat <unsigned long long>(t_ops ops,unsigned long long num );
 
     //====================================================
-    //     DEFINITION OF THE "go_to" FUNCTION
+    //     DEFINITION OF THE "traverse" FUNCTION
     //====================================================
-    std::string go_to( const int & x, const int & y )
+    template<class T>
+    std::string traverse( const T x, const T y )
     {
         return "\u001b[" +
            std::to_string( x ) +
@@ -58,6 +59,12 @@ namespace osm
            std::to_string( y ) +
            static_cast<std::string>( "H" );
     }
+    template std::string traverse <int>( const int x, const int y );
+    template std::string traverse <unsigned int>( const unsigned int x, const unsigned int y );
+    template std::string traverse <long>( const long x, const long y );
+    template std::string traverse <unsigned long>( const unsigned long x, const unsigned long y );
+    template std::string traverse <long long>( const long long x, const long long y );
+    template std::string traverse <unsigned long long>( const unsigned long long x, const unsigned long long y );
 
     //====================================================
     //     DEFINITION OF THE "RGB" FUNCTION

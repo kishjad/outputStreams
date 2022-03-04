@@ -33,7 +33,8 @@ namespace osm
     template <typename T>
     extern std::string feat(t_ops ops,T num );
     extern std::string reset( const std::string & reset_string );
-    extern std::string go_to( const int & x, const int & y );
+    template<class T>
+    extern std::string traverse( const T x, const T y );
     extern std::string RGB( const int & r, const int & g, const int & b );
 
     //====================================================
