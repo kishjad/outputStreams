@@ -1,19 +1,18 @@
 #ifndef CSMANIP_HPP
 #define CSMANIP_HPP
 
-// STD headers
+#include <termDefs.hpp>
+
 #include <iostream>
 #include <string>
 #include <map>
 #include <set>
 
-#include "termDefs.hpp"
 namespace outStream
 {
     //====================================================
     //     USING ALIASES
     //====================================================
-    using string_pair_map = std::map<std::string, std::pair<std::string, std::string>>;
     using string_set_map = std::map<std::string, std::set<std::string>>;
 
     //====================================================
