@@ -1,8 +1,14 @@
+
+/*
+ * This file is part of outputStream
+ * Licensed under the MIT License 
+ * Copyright (c) 2022 Kshitej Jadhav
+ */
 #ifndef PLOT2DCANVAS
 #define PLOT2DCANVAS
 
 // My headers
-#include "canvas.hpp"
+#include <canvas.hpp>
 
 // STD headers
 #include <functional>

@@ -1,8 +1,12 @@
-// My headers
+
+/*
+ * This file is part of outputStream
+ * Licensed under the MIT License 
+ * Copyright (c) 2022 Kshitej Jadhav
+ */
 #include "csmanip.hpp"
 #include "helper_tools.hpp"
 
-// STD headers
 #include <iostream>
 #include <string>
 #include <map>

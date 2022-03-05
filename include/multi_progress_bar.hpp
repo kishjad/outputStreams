@@ -1,8 +1,14 @@
+
+/*
+ * This file is part of outputStream
+ * Licensed under the MIT License 
+ * Copyright (c) 2022 Kshitej Jadhav
+ */
 #ifndef MULTIPROGRESSBAR_HPP
 #define MULTIPROGRESSBAR_HPP
 
 // My headers
-#include "csmanip.hpp"
+#include <csmanip.hpp>
 
 // STD headers
 #include <iostream>

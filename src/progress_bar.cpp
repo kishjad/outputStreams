@@ -1,9 +1,14 @@
-// My headers
-#include "helper_tools.hpp"
-#include "csmanip.hpp"
-#include "progress_bar.hpp"
 
-// STD headers
+/*
+ * This file is part of outputStream
+ * Licensed under the MIT License 
+ * Copyright (c) 2022 Kshitej Jadhav
+ */
+
+#include <helper_tools.hpp>
+#include <csmanip.hpp>
+#include <progress_bar.hpp>
+
 #include <iostream>
 #include <string>
 #include <chrono>

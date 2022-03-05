@@ -1,3 +1,9 @@
+
+/*
+ * This file is part of outputStream
+ * Licensed under the MIT License 
+ * Copyright (c) 2022 Kshitej Jadhav
+ */
 #ifndef TERMDEFS_HPP
 #define TERMDEFS_HPP
 #include <array>
