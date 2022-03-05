@@ -138,7 +138,6 @@ namespace outStream
         }
 
         unsigned int y = 0;
-        unsigned int x = 0;
 
         const auto & frame = [ & ]( unsigned int fi ) -> std::string
         {

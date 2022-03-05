@@ -25,18 +25,18 @@ namespace outStream
     //====================================================
     template <typename bar_type>
     ProgressBar<bar_type>::ProgressBar():
+     time_count_( duration::zero().count() ),
+     ticks_occurred( 0 ),
      max_( 0 ),
      min_( 0 ),
      style_( "" ),
      type_( "" ),
      message_( "" ),
-     time_count_( duration::zero().count() ),
      brackets_open_( "" ),
      brackets_close_( "" ),
-     begin_timer( steady_clock::now() ),
      color_( feat( t_ops::rst_color ) ),
-     ticks_occurred( 0 ),
-     time_flag_( "off" )
+     time_flag_( "off" ),
+     begin_timer( steady_clock::now() )
     {
     }
 

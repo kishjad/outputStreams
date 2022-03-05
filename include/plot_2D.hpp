@@ -48,7 +48,7 @@ namespace outStream
         template <typename Y, typename X>
         constexpr void draw( std::function<Y( X )> function, char c, const std::string & feat = "" )
         {
-            for( int x = 0; x < width_; x++ )
+            for( int x = 0; x < static_cast<int>(width_); x++ )
             {
                 float real_x = offset_x_ + x * scale_x_;
                 Y real_y = function( real_x );
