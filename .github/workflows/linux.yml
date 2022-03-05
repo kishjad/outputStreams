@@ -4,7 +4,7 @@ on:
   push:
     branches: 
       - develop
-      - master
+      - main
       - release/*
   pull_request:
     branches: [ main ]
@@ -30,7 +30,7 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --target outputStream
 
 #     - name: Test
 #       working-directory: ${{github.workspace}}/build
